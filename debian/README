@@ -1,7 +1,6 @@
-Droid 4 scripts to configure PM features
+Droid 4 script to configure PM features
 
-Copy the scripts/openrc/droid4-pm to /etc/init.d/droid4-pm and start
-it manually with:
+Copy the script to /etc/init.d/droid4-pm and start it manually with:
 
 # /etc/init.d/droid4-pm start
 
