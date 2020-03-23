@@ -1,4 +1,12 @@
 #!/sbin/openrc-run
+### BEGIN INIT INFO
+# Provides:          droid4-pm
+# Required-Start:    $remote_fs kmod udev
+# Required-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:
+# Short-Description: Motorola Droid 4 power management
+### END INIT INFO
 #
 # Start-up script to configure droid4 for power management
 #
