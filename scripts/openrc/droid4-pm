@@ -161,7 +161,10 @@ check_status() {
 	uw=$(cat /sys/class/power_supply/battery/power_avg)
 	mw=$((${uw} / 1000))
 	if [ -f /sys/class/power_supply/battery/capacity ]; then
-		cap=$(cat /sys/class/power_supply/battery/capacity)
+		cap=$(cat /sys/class/power_supply/battery/capacity 2>/dev/null)
+		if [ "${cap}" = "" ]; then
+			cap="NA"
+		fi
 	else
 		cap=0
 	fi
