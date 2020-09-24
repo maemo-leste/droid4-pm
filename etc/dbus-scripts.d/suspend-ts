@@ -1,0 +1,1 @@
+/usr/share/droid4-powermanagement/display-state-pm.sh * * com.nokia.mce.signal display_status_ind *
