@@ -75,7 +75,6 @@ check_module_blacklist() {
 	warn_if_module_loaded omap_hdq "Seems to poll devices, blacklist?"
 	warn_if_module_loaded hci_uart "Blocks uart4 idle oopses on rmmod, blacklist?"
 	warn_if_module_loaded phy-cpcap-usb "Consumes extra 10mW, used by debug UART, unload?"
-	warn_if_module_loaded atmel_mxt_ts "Should be unloaded when screen is blanked"
 }
 
 set_loglevel() {
@@ -131,7 +130,7 @@ check_clkctrl() {
 	if [ "${devmem}" != "" ]; then
 		val=$("${devmem}" "${address}")
 	elif [ "${rwmem}" != "" ]; then
-		val=$("${rwmem}" "${address}" | cut -d' ' -f3)
+		val=$("${rwmem}" "${address}" | cut -d' ' -f4)
 	else
 		return
 	fi
